@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block head_title %} Menu Items | {{block.super}} {% endblock head_title %}
+
+{% block content %}
+
+{% load static %}
+
+
+<div class="row" >
+
+<div class="container sidebar col-2 d-none d-sm-block" style="color:aliceblue">
+    adasd
+
+</div>
+
+<div class="container-fluid col-md-10 appdiv">
+    
+
+    <div class="row"  style="margin-bottom: 30px;">
+    
+        <div class="container col-md-3 text-center">
+          
+                <h2 class="user" style="color:aliceblue">Jan Kowalski</h2>
+            
+        
+            {% for obj in object_list %}
+    
+    
+        
+            <a href='{{ obj.get_absolute_url }}'>
+            <div class="rounded Divbg">
+                
+                 <h5>{{obj.name}}</h5>
+                {% if obj.contents %}       </br>
+                Jeśli content istnieje , wyświetl go:
+                <ul>
+                    {% for item in obj.get_contents%}
+                    {{item}}
+                    {% endfor %}
+                </ul>
+                    
+                {% endif %}
+                </div>
+            </a> 
+            {% endfor %}
+            {% for obj in object_list %}
+    
+    
+        
+            <a href='{{ obj.get_absolute_url }}'>
+            <div class="rounded Divbg">
+                
+                 <h2>{{obj.name}}</h2>
+                {% if obj.contents %}       </br>
+                <h6>Jeśli content istnieje , wyświetl go:
+                <ul>
+                    {% for item in obj.get_contents%}
+                    {{item}}
+                    {% endfor %}
+                </ul>
+                    </h6>
+                {% endif %}
+                </div>
+            </a> 
+            {% endfor %}
+        </div>
+
+        <div class="col-md-3 text-center">
+            <h2 class="user" style="color:aliceblue">Jan Kowalski</h2>
+           
+            {% for obj in object_list %}
+    
+    
+        
+            <a href='{{ obj.get_absolute_url }}'>
+            <div class="rounded Divbg">
+                
+                 <h2>{{obj.name}}</h2>
+                {% if obj.contents %}       </br>
+                <h6>Jeśli content istnieje , wyświetl go:
+                <ul>
+                    {% for item in obj.get_contents%}
+                    {{item}}
+                    {% endfor %}
+                </ul>
+                    </h6>
+                {% endif %}
+                </div>
+            </a> 
+            {% endfor %}
+        </div>
+
+        <div class="col-md-3 text-center">
+            <h2 class="user" style="color:aliceblue">Jan Kowalski</h2>
+          
+            {% for obj in object_list %}
+    
+    
+        
+            <a href='{{ obj.get_absolute_url }}'>
+            <div class="rounded Divbg">
+                
+                 <h2>{{obj.name}}</h2>
+                {% if obj.contents %}       </br>
+                <h6>Jeśli content istnieje , wyświetl go:
+                <ul>
+                    {% for item in obj.get_contents%}
+                    {{item}}
+                    {% endfor %}
+                </ul>
+                    </h6>
+                {% endif %}
+                </div>
+            </a> 
+            {% endfor %}
+        </div>
+        <div class="col-md-3 text-center">
+            
+            <h2 class="user" style="color:aliceblue">Jan Kowalski</h2>
+            {% for obj in object_list %}
+    
+    
+        
+            <a href='{{ obj.get_absolute_url }}'>
+            <div class="rounded Divbg">
+                
+                 <h2>{{obj.name}}</h2>
+                {% if obj.contents %}       </br>
+                <h6>Jeśli content istnieje , wyświetl go:
+                <ul>
+                    {% for item in obj.get_contents%}
+                    {{item}}
+                    {% endfor %}
+                </ul>
+                    </h6>
+                {% endif %}
+                </div>
+            </a> 
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+<footer class="footer fixed-bottom bg-dark " style="box-shadow: 0px -3px 10px black;height: 8%;min-height: 50px;">
+    <div class="container-fluid " style="height:100%">
+      <div class="row" style="height:100%">
+            <div class="col-md-2">
+                <span style="color:grey">Groomer - Ver. -600</span>
+            </div>
+            <div class="col-md-10  text-center"style="height:100%" >
+                <div class="row"style="height:80%">
+                    <div class="col-md-3" style="height:80%; " >
+                        
+                        <a href="#" ><img src="{% static 'images/plus.svg' %}" alt="My image " style="height:80%;margin-top:5%"  ></a>
+                    </div>
+                    <div class="col-md-3" style="height:80%; " >
+                        
+                        <a href="#" ><img src="{% static 'images/plus.svg' %}" alt="My image " style="height:80%;margin-top:5%"  ></a>
+                    </div>
+                    <div class="col-md-3" style="height:80%; " >
+                        
+                        <a href="#" ><img src="{% static 'images/plus.svg' %}" alt="My image " style="height:80%;margin-top:5%"  ></a>
+                    </div>
+                    <div class="col-md-3" style="height:80%; " >
+                        
+                        <a href="#" ><img src="{% static 'images/plus.svg' %}" alt="My image " style="height:80%;margin-top:5%"  ></a>
+                    </div>
+                </div>
+            </div>
+        
+      </div>
+
+  </footer>
+
+{% endblock content %}
+

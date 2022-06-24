@@ -1,0 +1,49 @@
+{% load static %}
+
+<div class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" style="box-shadow: 0px 3px 10px black; height: 5%;min-height: 60px;">
+
+    <div class="container ms-1" style="max-width:400px;">
+            <a href="#" class="navbar-brand "><img src="{% static 'images/logo.svg' %}" alt="My image"  height="35"> </a>
+           
+    </div>
+    <button class="navbar-toggler me-3 " type="button" data-bs-toggle="collapse" data-bs-target="#idNav">
+                     
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container-fluid " >
+        
+        <div class =" collapse navbar-collapse " id="idNav">
+            
+            <ul class="navbar-nav mx-auto  "  style="background-color: rgb(33 37 41);">
+                
+                <li class="nav-item hov rounded"><a class='nav-link' href="/"><b>KALENDARZ</b></a></li>
+                <li class="nav-item"><a class='nav-link' href="/home2/"><b>KLIENCI</b></a></li>
+                <li class="nav-item"><a class='nav-link' href="/home3/"><b>RAPORTY</b></a></li>
+                <li class="nav-item"><a class='nav-link' href="/home4/"><b>FINANSE</b></a></li>
+                <li class="nav-item"><a class='nav-link' href="/admin/"><b>Panel admina</b></a></li>
+                <li class="nav-item"><a class='nav-link' href="/items/"><b>Items</b></a></li>       
+                    
+            </ul>
+        
+        </div>
+ 
+        
+    </div>
+
+
+
+    <div class="container" style="max-width:350px;">
+        <div class ="collapse navbar-collapse justify-content-end" >
+           
+            <div class="nav-text  text-center   ">  
+                <h6 style="color:white;">Login użytkoniwka</h6>
+                <h6 style="color:white;">FIRMA</h6>               
+            </div>
+            <img src="{% static 'images/profile_icon.svg' %}" alt="My image"  height="25"> 
+        </div>
+     </div>
+
+</div>
+
+
+

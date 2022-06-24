@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head_title %} Menu Items | {{object.name}} {% endblock head_title %}
+
+{% block content %}
+
+    <div class="col-2 " >
+        <div class="container-fluid rounded Divbg" >
+            {{object.name}} {{object.surname}}
+            <h6>Contents : {{object.contents}} </h2>
+            <h6>Excludes : {{object.excludes}} </h2>
+            <h6>Modified : {{object.updated}} </h2>
+        </div>
+    </div>
+   
+
+
+HOME3 for example ;)
+
+{% endblock content %}

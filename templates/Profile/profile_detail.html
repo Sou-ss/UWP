@@ -1,0 +1,17 @@
+{% for object in object_list %}
+<h1>Profil:  {{object.user}}</h1>
+
+Adres e-mail:{{object.user.email}}<br/>
+Imię:{{object.user.first_name}}<br/>
+Nazwisko:{{object.user.last_name}}<br/>
+Czy właściciel:{{object.owner}}<br/>
+Czy aktywny:{{object.aktywny}}<br/>
+{% endfor %}
+
+<h1>Profil:  {{object.user}}</h1>
+
+Adres e-mail:{{object.user.email}}<br/>
+Imię:{{object.user.first_name}}<br/>
+Nazwisko:{{object.user.last_name}}<br/>
+Czy właściciel:{{object.owner}}<br/>
+Czy aktywny:{{object.aktywny}}<br/>

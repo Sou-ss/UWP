@@ -1,0 +1,188 @@
+
+<!-- do wykorzystania -->
+
+<!DOCTYPE html>
+<html lang=en>
+    <html>
+
+        <head>
+          
+          <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+          <title>Logowanie</title>
+          <style>
+                        body {
+                            background: rgb(120, 120, 120);
+            font-family: 'Ubuntu', sans-serif;
+   
+        }
+        
+        .main {
+            background-color: rgb(41, 45, 49);
+            width: 400px;
+            height: 400px;
+            margin: 7em auto;
+            border-radius: 1.5em;
+            box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+        }
+        
+        .sign {
+            padding-top: 120px;
+            color: rgb(240, 112, 0);
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            font-size: 23px;
+        }
+        
+        .un {
+        width: 76%;
+        color: rgb(168, 168, 168);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background: rgb(255, 255, 255);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px solid rgba(0, 0, 0, 0.02);
+        margin-bottom: 50px;
+        margin-left: 46px;
+        text-align: center;
+        margin-bottom: 27px;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        
+        form.form1 {
+            padding-top: 40px;
+        }
+        
+        .pass {
+                width: 76%;
+        color: rgb(168, 168, 168);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background: rgb(255, 255, 255);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px solid rgba(0, 0, 0, );
+        margin-bottom: 50px;
+        margin-left: 46px;
+        text-align: center;
+        margin-bottom: 27px;
+        font-family: 'Ubuntu', sans-serif;
+        }
+        
+    
+        .un:focus, .pass:focus {
+            border: 2px solid rgba(0, 0, 0, 0.18) !important;
+            
+        }
+
+      .error{
+          color:rgb(125, 0, 0);
+          background-color: rgb(184, 91, 91);
+          border-radius: 10px;
+          border: 3px solid rgb(125, 0, 0);
+          padding: 10px;
+          width: 400px;
+          justify-content: center;
+          position: absolute; 
+          left: 0; 
+          right: 0; 
+          margin-left: auto; 
+          margin-right: auto; 
+          width: 400px;
+          
+          
+          
+      }
+    
+        .submit {
+        cursor: pointer;
+            border-radius: 5em ;
+            color: 000;
+            background: linear-gradient(to right, rgb(102, 102, 102), rgb(133, 133, 133));
+            border: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-left: 35%;
+            font-size: 13px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        }
+        
+        .forgot {
+            text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+            color: rgb(235, 148, 72);
+            padding-top: 15px;
+        }
+        
+        a {
+            text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+            color: rgb(235, 148, 72);
+            text-decoration: none
+        }
+        .centerimg{
+            
+            margin-left: 10px;
+        }
+    
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+            background-color: rgb(41, 45, 49);
+            box-shadow: none ;
+        }
+        body {
+            background:none;
+        background-color: rgb(41, 45, 49);
+        font-family: 'Ubuntu', sans-serif;
+        
+        }
+        .centerimg
+        {
+        
+           
+            display: flex;
+  justify-content: center;
+           
+           
+        }
+        }
+          </style>
+        
+      </head>
+        {% load static %}
+        <body>
+            <div class="container centerimg">
+                <a href="#"><img src="{% static 'images/logo.png' %}" alt="My image"  height="100" > </a>
+            </div>
+            {% if form.errors %}
+            <p class="error">Podane dane są nieprawidłowe. Spróbuj ponownie.</p>
+            {% endif %}
+            {% if next %}
+                {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+        
+                {% endif %}
+            {% endif %}
+        <div class="main">
+           <p class="sign" align="center">Konto zostało aktywowane!</p>
+
+          <a href="/accounts/login"> <button class="submit"  align="center">Zaloguj się</button>   </a>
+                        
+            </div>
+             
+        </body>
+        
+        </html>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul>
+    {% for obj in object_list %}
+    <div class="container rounded" style="background-color: #212529;">
+         <li> {{obj}}</li>
+    </div>
+    {% endfor%}
+</ul>
+HOME3 for example ;)
+
+{% endblock content %}
